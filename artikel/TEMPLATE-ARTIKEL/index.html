@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SEO — Edit these for every article                    -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <title>Your Article Title Here — LumaPost</title>
+  <meta name="description" content="Write a 150-160 character description of this article for search engines." />
+  <meta name="keywords" content="keyword1, keyword2, keyword3" />
+  <meta name="author" content="LumaPost Team" />
+  <link rel="canonical" href="https://lumapost.pages.dev/artikel/YOUR-SLUG/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://lumapost.pages.dev/artikel/YOUR-SLUG/" />
+  <meta property="og:title" content="Your Article Title Here" />
+  <meta property="og:description" content="Short description for social media sharing." />
+  <meta property="og:image" content="https://lumapost.pages.dev/images/YOUR-THUMB.jpg" />
+  <meta property="article:published_time" content="2025-01-01" />
+  <meta property="article:author" content="LumaPost Team" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Article Title Here" />
+  <meta name="twitter:description" content="Short description for Twitter." />
+  <meta name="twitter:image" content="https://lumapost.pages.dev/images/YOUR-THUMB.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#f0d080', 400: '#e8c24a', 500: '#c9a227', 600: '#a07d1a' },
+            ink:  { 900: '#0a0a0b', 800: '#111114', 700: '#18181c', 600: '#222228', 500: '#2e2e36' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ink-900 text-gray-100 font-body antialiased dark">
+
+<!-- Reading Progress Bar (auto-fills via JS) -->
+<div id="readingProgress"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  NAVBAR                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+      <a href="../../index.html" class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+          <svg class="w-3.5 h-3.5 text-ink-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="font-display text-lg font-bold">Luma<span class="text-gold-400">Post</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="../../index.html" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Home</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Categories</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">About</a>
+      </div>
+      <a href="../../index.html" class="btn-gold text-xs px-4 py-2 rounded-lg font-medium">← Back</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ARTICLE HEADER                                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<article class="max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-20">
+
+  <!-- Breadcrumb — Edit: Category name and link -->
+  <nav class="flex items-center mb-8 flex-wrap gap-1" aria-label="Breadcrumb">
+    <span class="breadcrumb-item"><a href="../../index.html">Home</a></span>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item"><a href="#">Category Name</a></span>  <!-- ← Edit this -->
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item current">Article Short Title</span>     <!-- ← Edit this -->
+  </nav>
+
+  <!-- Meta row — Edit: category, date, read time -->
+  <div class="flex flex-wrap items-center gap-3 mb-6">
+    <span class="badge-category">Technology</span>         <!-- ← Edit category -->
+    <span class="badge-time" id="readingTime">Calculating...</span>  <!-- auto-filled by JS -->
+    <span class="text-xs text-gray-600">January 1, 2025</span>      <!-- ← Edit date -->
+  </div>
+
+  <!-- Article Title — Edit this -->
+  <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white mb-6">
+    Your Full Article Title Goes Here
+  </h1>
+
+  <!-- Lead paragraph / intro — Edit this -->
+  <p class="text-gray-400 text-lg leading-relaxed mb-8 border-l-2 border-gold-500 pl-4">
+    A compelling 1–2 sentence introduction that hooks the reader and summarizes what they'll learn.
+  </p>
+
+  <!-- Author + share row -->
+  <div class="flex items-center justify-between pb-8 border-b border-ink-600 mb-10">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-500/30 flex items-center justify-center">
+        <span class="text-sm font-bold text-gold-400">LP</span>   <!-- ← Replace with author initials -->
+      </div>
+      <div>
+        <div class="text-sm font-medium text-white">LumaPost Team</div>   <!-- ← Edit author name -->
+        <div class="text-xs text-gray-500">Editor & Content Writer</div>  <!-- ← Edit author role -->
+      </div>
+    </div>
+    <button onclick="navigator.share?.({title:document.title,url:location.href})"
+      class="text-xs text-gray-500 hover:text-gold-400 transition-colors border border-ink-600 rounded-lg px-3 py-1.5 flex items-center gap-1.5">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+      Share
+    </button>
+  </div>
+
+  <!-- Hero Image — Edit: src and alt -->
+  <div class="rounded-2xl overflow-hidden mb-12">
+    <img
+      src="../../images/YOUR-THUMB.jpg"
+      alt="Article featured image description"
+      class="w-full h-64 sm:h-80 object-cover"
+      loading="eager"
+      onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80'"
+    />
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  ARTICLE BODY — Write your content here               -->
+  <!--  Available elements:                                   -->
+  <!--   <h2> — Main section heading                         -->
+  <!--   <h3> — Sub-section heading                          -->
+  <!--   <p>  — Paragraph                                    -->
+  <!--   <ul>/<ol>/<li> — Lists                              -->
+  <!--   <blockquote><p> — Pull quote                        -->
+  <!--   <pre><code> — Code block                            -->
+  <!--   <code> — Inline code                                -->
+  <!--   <strong> — Bold text                                -->
+  <!--   <a href=""> — Link                                  -->
+  <!--   <hr> — Divider line                                 -->
+  <!--   <img> — Image inside article                        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="article-body">
+
+    <p>
+      Start your article here. Write your opening paragraph that gives context and draws the reader in.
+    </p>
+
+    <h2>Your First Section Heading</h2>
+
+    <p>
+      Write your section content here. Keep paragraphs focused — one idea per paragraph works best for readability.
+    </p>
+
+    <ul>
+      <li><strong>Point one</strong> — Explain it briefly here</li>
+      <li><strong>Point two</strong> — Explain it briefly here</li>
+      <li><strong>Point three</strong> — Explain it briefly here</li>
+    </ul>
+
+    <h2>Your Second Section Heading</h2>
+
+    <p>
+      Continue writing here. Use <strong>bold</strong> to emphasize key terms.
+      Link to relevant sources with <a href="#">anchor text like this</a>.
+    </p>
+
+    <blockquote>
+      <p>"A memorable quote or key takeaway from this section goes here."</p>
+    </blockquote>
+
+    <h3>A Sub-section If Needed</h3>
+
+    <p>
+      Use h3 headings for sub-topics within a major section.
+    </p>
+
+    <pre><code>// Example code block
+const example = "your code here";
+console.log(example);</code></pre>
+
+    <h2>Conclusion</h2>
+
+    <p>
+      Wrap up your article with a clear conclusion. Summarize the key points and give the reader a clear next step or call to action.
+    </p>
+
+    <hr />
+
+    <p><em>Found this article helpful? Share it with someone who needs it. Browse more articles on <a href="../../index.html">LumaPost</a>.</em></p>
+
+  </div>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- END ARTICLE BODY                                        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  PAGE NAVIGATION                                         -->
+  <!--  For single-page articles: only show "Back to Home"     -->
+  <!--  For multi-page: add prev/next links below              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="flex flex-col sm:flex-row items-stretch gap-3 mt-16 pt-10 border-t border-ink-600">
+
+    <!-- PREVIOUS PAGE — Uncomment and edit if this article has a prev page -->
+    <!--
+    <a href="index.html" class="flex-1 flex items-center gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all group">
+      <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <div>
+        <span class="text-xs text-gray-500 block mb-0.5">← Previous</span>
+        <span class="text-sm font-medium text-white group-hover:text-gold-400 transition-colors">Page 1: Setup</span>
+      </div>
+    </a>
+    -->
+
+    <!-- Back to Home (always present) -->
+    <a href="../../index.html" class="flex-1 flex items-center justify-center gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all text-sm font-medium text-gray-300 hover:text-gold-400">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Back to Home
+    </a>
+
+    <!-- NEXT PAGE — Uncomment and edit if this article continues to page 2 -->
+    <!--
+    <a href="page-2.html" class="flex-1 flex items-center justify-between gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all group">
+      <div>
+        <span class="text-xs text-gray-500 block mb-0.5">Next Page →</span>
+        <span class="text-sm font-medium text-white group-hover:text-gold-400 transition-colors">Page 2: Advanced Tips</span>
+      </div>
+      <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    -->
+
+  </div>
+
+</article>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  RELATED ARTICLES — Add 2–4 related article cards here    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
+  <div class="border-t border-ink-700 pt-12">
+    <h2 class="font-display text-xl font-bold text-white mb-6">Related Articles</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+      <!-- RELATED CARD #1 — Edit: href, img, category, title, read time -->
+      <a href="../tips-seo-2025/index.html" class="related-card group">
+        <img
+          src="../../images/thumb-seo.jpg"
+          alt="SEO Tips 2025"
+          class="related-thumb"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=200&q=70'"
+        />
+        <div>
+          <span class="text-xs text-gold-500 font-medium mb-1 block">SEO</span>
+          <p class="related-title">10 Latest SEO Tips for 2025 You Need to Know Right Now</p>
+          <span class="text-xs text-gray-600 mt-1 block">6 min read</span>
+        </div>
+      </a>
+
+      <!-- RELATED CARD #2 — Edit: href, img, category, title, read time -->
+      <a href="../modern-ui-design/index.html" class="related-card group">
+        <img
+          src="../../images/thumb-design.jpg"
+          alt="Modern UI Design"
+          class="related-thumb"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1545235617-9465d2a55698?w=200&q=70'"
+        />
+        <div>
+          <span class="text-xs text-gold-500 font-medium mb-1 block">Design</span>
+          <p class="related-title">Modern UI Design Principles Every Designer Must Master in 2025</p>
+          <span class="text-xs text-gray-600 mt-1 block">10 min read</span>
+        </div>
+      </a>
+
+      <!-- Add more related cards here if needed -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-ink-700 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../../index.html" class="font-display text-lg font-bold">Luma<span class="text-gold-400">Post</span></a>
+    <p class="text-xs text-gray-600">© 2025 LumaPost. Premium Article Portal.</p>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

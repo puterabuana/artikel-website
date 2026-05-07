@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cara Membuat Website Gratis — Halaman 2: Optimasi & SEO — LumaPost</title>
+  <meta name="description" content="Lanjutan panduan membuat website gratis: optimasi performa, SEO teknikal, dan tips agar website Anda tampil di halaman pertama Google." />
+  <link rel="canonical" href="https://lumapost.pages.dev/artikel/cara-membuat-website-gratis/page-2.html" />
+
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#f0d080', 400: '#e8c24a', 500: '#c9a227', 600: '#a07d1a' },
+            ink:  { 900: '#0a0a0b', 800: '#111114', 700: '#18181c', 600: '#222228', 500: '#2e2e36' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ink-900 text-gray-100 font-body antialiased dark">
+
+<div id="readingProgress"></div>
+
+<!-- Navbar -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+      <a href="../../index.html" class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+          <svg class="w-3.5 h-3.5 text-ink-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="font-display text-lg font-bold">Luma<span class="text-gold-400">Post</span></span>
+      </a>
+      <a href="../../index.html" class="btn-gold text-xs px-4 py-2 rounded-lg font-medium">← Beranda</a>
+    </nav>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-20">
+
+  <!-- Breadcrumb -->
+  <nav class="flex items-center mb-8 flex-wrap gap-1">
+    <span class="breadcrumb-item"><a href="../../index.html">Beranda</a></span>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item"><a href="index.html">Cara Membuat Website Gratis</a></span>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item current">Halaman 2</span>
+  </nav>
+
+  <!-- Page indicator -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="badge-category">Teknologi</span>
+    <span class="text-xs text-gray-500 bg-ink-700 border border-ink-500 rounded-full px-3 py-1">Halaman 2 dari 3</span>
+    <span class="badge-time" id="readingTime">Menghitung...</span>
+  </div>
+
+  <h1 class="font-display text-3xl sm:text-4xl font-black leading-tight text-white mb-6">
+    Optimasi Performa & SEO untuk Website Gratis Anda
+  </h1>
+
+  <p class="text-gray-400 text-lg leading-relaxed mb-10 border-l-2 border-gold-500 pl-4">
+    Memiliki website saja tidak cukup — website harus cepat, mudah ditemukan, dan memberikan pengalaman terbaik bagi pengunjung.
+  </p>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  ISI ARTIKEL HALAMAN 2 — Edit konten di bawah ini     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="article-body">
+
+    <h2>Mengapa Performa Website Sangat Penting?</h2>
+
+    <p>
+      Google secara resmi menyatakan bahwa kecepatan halaman adalah faktor ranking. Penelitian menunjukkan bahwa 53% pengunjung mobile akan meninggalkan halaman yang membutuhkan lebih dari 3 detik untuk dimuat.
+    </p>
+
+    <h2>Optimasi Core Web Vitals</h2>
+
+    <p>
+      Core Web Vitals adalah metrik performa yang digunakan Google untuk menilai pengalaman pengguna. Ada tiga metrik utama:
+    </p>
+
+    <ul>
+      <li><strong>LCP (Largest Contentful Paint)</strong> — Waktu muat elemen terbesar. Target: di bawah 2.5 detik</li>
+      <li><strong>FID (First Input Delay)</strong> — Responsivitas halaman terhadap interaksi pertama. Target: di bawah 100ms</li>
+      <li><strong>CLS (Cumulative Layout Shift)</strong> — Stabilitas visual. Target: di bawah 0.1</li>
+    </ul>
+
+    <h3>Cara Meningkatkan LCP</h3>
+
+    <p>
+      Untuk website statis seperti yang kita buat, LCP biasanya dipengaruhi oleh gambar hero. Berikut cara mengoptimalkannya:
+    </p>
+
+    <ul>
+      <li>Gunakan format WebP atau AVIF untuk gambar</li>
+      <li>Tambahkan atribut <code>loading="eager"</code> pada gambar above-the-fold</li>
+      <li>Tentukan dimensi gambar dengan <code>width</code> dan <code>height</code></li>
+      <li>Gunakan Cloudflare Images atau Imgix untuk optimasi otomatis</li>
+    </ul>
+
+    <h2>SEO Teknikal untuk Website Statis</h2>
+
+    <p>
+      Website statis sebenarnya memiliki keunggulan SEO teknikal yang besar karena tidak ada server-side rendering yang lambat. Namun, ada beberapa hal yang tetap perlu diperhatikan:
+    </p>
+
+    <h3>1. Struktur URL yang Bersih</h3>
+
+    <pre><code>✅ Baik:
+lumapost.pages.dev/artikel/cara-membuat-website/
+
+❌ Hindari:
+lumapost.pages.dev/artikel?id=123&page=1</code></pre>
+
+    <h3>2. Meta Tags yang Tepat</h3>
+
+    <p>
+      Setiap halaman harus memiliki meta title unik (50-60 karakter) dan meta description yang menarik (150-160 karakter). Hindari duplikasi meta tags antar halaman.
+    </p>
+
+    <h3>3. Schema Markup (JSON-LD)</h3>
+
+    <p>
+      Tambahkan schema markup untuk membantu Google memahami konten Anda. Untuk artikel blog, gunakan schema <code>Article</code> atau <code>BlogPosting</code>:
+    </p>
+
+    <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Judul Artikel Anda",
+  "datePublished": "2025-01-12",
+  "author": {
+    "@type": "Person",
+    "name": "Nama Penulis"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+    <h2>Tips Tambahan untuk Performa Maksimal</h2>
+
+    <ul>
+      <li>Minify CSS dan JavaScript sebelum upload</li>
+      <li>Gunakan font system sebagai fallback agar tidak menunggu font load</li>
+      <li>Aktifkan Cloudflare's automatic minification di dashboard</li>
+      <li>Gunakan <code>rel="preconnect"</code> untuk domain eksternal seperti Google Fonts</li>
+    </ul>
+
+    <blockquote>
+      <p>Website yang cepat bukan hanya untuk SEO — itu adalah bentuk rasa hormat kepada pengunjung Anda.</p>
+    </blockquote>
+
+  </div>
+  <!-- END ISI ARTIKEL HALAMAN 2 -->
+
+  <!-- Page Navigation -->
+  <div class="flex flex-col sm:flex-row items-stretch gap-3 mt-16 pt-10 border-t border-ink-600">
+    <a href="index.html" class="flex-1 flex items-center gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all group">
+      <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <div>
+        <span class="text-xs text-gray-500 block mb-0.5">← Sebelumnya</span>
+        <span class="text-sm font-medium text-white group-hover:text-gold-400 transition-colors">Halaman 1: Setup Website</span>
+      </div>
+    </a>
+
+    <a href="../../index.html" class="flex items-center justify-center gap-2 p-4 rounded-xl bg-ink-700 border border-ink-600 hover:border-gold-500/30 transition-all text-sm font-medium text-gray-400 hover:text-gold-400 px-6">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      Beranda
+    </a>
+
+    <a href="page-3.html" class="flex-1 flex items-center justify-between gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all group">
+      <div>
+        <span class="text-xs text-gray-500 block mb-0.5">Berikutnya →</span>
+        <span class="text-sm font-medium text-white group-hover:text-gold-400 transition-colors">Halaman 3: Domain & Launch</span>
+      </div>
+      <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="border-t border-ink-700 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../../index.html" class="font-display text-lg font-bold">Luma<span class="text-gold-400">Post</span></a>
+    <p class="text-xs text-gray-600">© 2025 LumaPost. Portal Artikel Premium Indonesia.</p>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

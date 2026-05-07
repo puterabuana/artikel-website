@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SEO META TAGS — Edit sesuai artikel ini               -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <title>Cara Membuat Website Gratis yang Profesional di Tahun 2025 — LumaPost</title>
+  <meta name="description" content="Panduan lengkap cara membuat website gratis dari nol hingga live. Cocok untuk pemula dan profesional yang ingin tampil online tanpa biaya." />
+  <meta name="keywords" content="cara membuat website gratis, website gratis 2025, hosting gratis, cloudflare pages, github pages" />
+  <meta name="author" content="Tim LumaPost" />
+  <link rel="canonical" href="https://lumapost.pages.dev/artikel/cara-membuat-website-gratis/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://lumapost.pages.dev/artikel/cara-membuat-website-gratis/" />
+  <meta property="og:title" content="Cara Membuat Website Gratis yang Profesional di Tahun 2025" />
+  <meta property="og:description" content="Panduan lengkap dari nol hingga website Anda live — tanpa biaya sepeser pun." />
+  <meta property="og:image" content="https://lumapost.pages.dev/images/thumb-website.jpg" />
+  <meta property="article:published_time" content="2025-01-12" />
+  <meta property="article:author" content="Tim LumaPost" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cara Membuat Website Gratis yang Profesional di Tahun 2025" />
+  <meta name="twitter:description" content="Panduan lengkap dari nol hingga website Anda live — tanpa biaya sepeser pun." />
+  <meta name="twitter:image" content="https://lumapost.pages.dev/images/thumb-website.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#f0d080', 400: '#e8c24a', 500: '#c9a227', 600: '#a07d1a' },
+            ink:  { 900: '#0a0a0b', 800: '#111114', 700: '#18181c', 600: '#222228', 500: '#2e2e36' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ink-900 text-gray-100 font-body antialiased dark">
+
+<!-- Reading Progress Bar -->
+<div id="readingProgress"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  NAVBAR                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
+      <a href="../../index.html" class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+          <svg class="w-3.5 h-3.5 text-ink-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="font-display text-lg font-bold">Luma<span class="text-gold-400">Post</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="../../index.html" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Beranda</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Kategori</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Tentang</a>
+      </div>
+      <a href="../../index.html" class="btn-gold text-xs px-4 py-2 rounded-lg font-medium">← Kembali</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ARTIKEL HEADER                                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<article class="max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-20">
+
+  <!-- Breadcrumb -->
+  <nav class="flex items-center mb-8 flex-wrap gap-1" aria-label="Breadcrumb">
+    <span class="breadcrumb-item"><a href="../../index.html">Beranda</a></span>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item"><a href="#">Teknologi</a></span>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item current">Cara Membuat Website Gratis</span>
+  </nav>
+
+  <!-- Category & Meta -->
+  <div class="flex flex-wrap items-center gap-3 mb-6">
+    <span class="badge-category">Teknologi</span>
+    <span class="badge-time" id="readingTime">Menghitung...</span>
+    <span class="text-xs text-gray-600">12 Januari 2025</span>
+  </div>
+
+  <!-- Judul Artikel -->
+  <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white mb-6">
+    Cara Membuat Website Gratis yang Profesional di Tahun 2025
+  </h1>
+
+  <!-- Sub-judul / intro -->
+  <p class="text-gray-400 text-lg leading-relaxed mb-8 border-l-2 border-gold-500 pl-4">
+    Panduan lengkap dari nol hingga website Anda live — tanpa biaya sepeser pun. Cocok untuk pemula maupun profesional yang ingin tampil online.
+  </p>
+
+  <!-- Author & Share -->
+  <div class="flex items-center justify-between pb-8 border-b border-ink-600 mb-10">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-500/30 flex items-center justify-center">
+        <span class="text-sm font-bold text-gold-400">LP</span>
+      </div>
+      <div>
+        <div class="text-sm font-medium text-white">Tim LumaPost</div>
+        <div class="text-xs text-gray-500">Editor & Penulis Konten</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button onclick="navigator.share?.({title: document.title, url: location.href})" class="text-xs text-gray-500 hover:text-gold-400 transition-colors border border-ink-600 rounded-lg px-3 py-1.5 flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Thumbnail -->
+  <div class="rounded-2xl overflow-hidden mb-12">
+    <img
+      src="../../images/thumb-website.jpg"
+      alt="Cara Membuat Website Gratis 2025"
+      class="w-full h-64 sm:h-80 object-cover"
+      loading="eager"
+      onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80'"
+    />
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  ISI ARTIKEL — Edit konten di bawah ini               -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="article-body">
+
+    <p>
+      Di era digital seperti sekarang, memiliki website adalah hal yang wajib — baik untuk bisnis, portofolio, maupun blog pribadi. Kabar baiknya, Anda tidak perlu mengeluarkan sepeser pun untuk memiliki website yang terlihat profesional.
+    </p>
+
+    <h2>Mengapa Website Gratis Bisa Profesional?</h2>
+
+    <p>
+      Banyak orang beranggapan bahwa website gratis selalu terlihat murahan. Padahal, dengan memanfaatkan platform hosting modern seperti <strong>Cloudflare Pages</strong> dan <strong>GitHub Pages</strong>, Anda bisa mendapatkan performa luar biasa tanpa biaya.
+    </p>
+
+    <blockquote>
+      <p>"Website bukan tentang seberapa mahal biayanya, tapi seberapa baik ia melayani pengunjung."</p>
+    </blockquote>
+
+    <h2>Langkah 1: Pilih Platform Hosting</h2>
+
+    <p>
+      Ada beberapa pilihan hosting gratis terbaik yang bisa Anda gunakan:
+    </p>
+
+    <ul>
+      <li><strong>Cloudflare Pages</strong> — Performa terbaik, CDN global, unlimited bandwidth</li>
+      <li><strong>GitHub Pages</strong> — Terintegrasi dengan Git, cocok untuk developer</li>
+      <li><strong>Netlify</strong> — Build automation, form handling gratis</li>
+      <li><strong>Vercel</strong> — Optimal untuk frontend modern</li>
+    </ul>
+
+    <p>
+      Untuk tutorial ini, kita akan menggunakan <strong>Cloudflare Pages</strong> karena menawarkan performa terbaik dengan fitur lengkap secara gratis.
+    </p>
+
+    <h2>Langkah 2: Siapkan Repository GitHub</h2>
+
+    <p>
+      Sebelum deploy ke Cloudflare Pages, Anda perlu menyimpan kode website di GitHub. Berikut langkah-langkahnya:
+    </p>
+
+    <ol>
+      <li>Buat akun di <a href="https://github.com" target="_blank" rel="noopener">github.com</a></li>
+      <li>Buat repository baru dengan nama "website-saya"</li>
+      <li>Upload file HTML, CSS, dan JavaScript Anda</li>
+      <li>Pastikan file utama bernama <code>index.html</code></li>
+    </ol>
+
+    <h3>Struktur Folder yang Direkomendasikan</h3>
+
+    <pre><code>website-saya/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── images/
+│   └── foto.jpg
+└── artikel/
+    └── judul-artikel/
+        └── index.html</code></pre>
+
+    <h2>Langkah 3: Deploy ke Cloudflare Pages</h2>
+
+    <p>
+      Setelah repository siap, saatnya menghubungkan dengan Cloudflare Pages:
+    </p>
+
+    <ol>
+      <li>Buka <a href="https://pages.cloudflare.com" target="_blank" rel="noopener">pages.cloudflare.com</a> dan buat akun</li>
+      <li>Klik "Create a project" → pilih "Connect to Git"</li>
+      <li>Pilih repository GitHub Anda</li>
+      <li>Biarkan pengaturan default (tidak perlu build command untuk static site)</li>
+      <li>Klik "Save and Deploy"</li>
+    </ol>
+
+    <p>
+      Dalam hitungan detik, website Anda akan live dengan URL <code>nama-project.pages.dev</code>. Setiap kali Anda push perubahan ke GitHub, website akan otomatis terupdate.
+    </p>
+
+    <h2>Langkah 4: Domain Custom (Opsional)</h2>
+
+    <p>
+      Ingin domain sendiri seperti <code>namaanda.com</code>? Cloudflare Pages mendukung custom domain secara gratis. Anda hanya perlu membeli domain (mulai Rp50.000/tahun di Niagahoster atau Domainesia), lalu hubungkan di pengaturan Cloudflare Pages.
+    </p>
+
+    <h2>Tips SEO untuk Website Statis</h2>
+
+    <p>
+      Website statis sebenarnya sangat SEO-friendly karena cepat dan ringan. Berikut hal penting yang harus Anda tambahkan:
+    </p>
+
+    <ul>
+      <li>Meta title dan description yang unik di setiap halaman</li>
+      <li>Open Graph tags untuk tampilan di media sosial</li>
+      <li>Sitemap XML untuk membantu Google mengindeks</li>
+      <li>File robots.txt untuk panduan crawler</li>
+      <li>Canonical URL untuk menghindari duplikasi konten</li>
+    </ul>
+
+    <h2>Kesimpulan</h2>
+
+    <p>
+      Membuat website profesional gratis di tahun 2025 bukan lagi hal yang sulit. Dengan kombinasi HTML, CSS, JavaScript, GitHub, dan Cloudflare Pages, Anda bisa memiliki website yang cepat, aman, dan terlihat premium — tanpa biaya hosting sama sekali.
+    </p>
+
+    <p>
+      Yang terpenting adalah konsisten membuat konten berkualitas dan terus mengoptimalkan performa website Anda. Selamat mencoba!
+    </p>
+
+    <hr />
+
+    <p><em>Artikel ini adalah bagian dari seri panduan pembuatan website statis. Baca juga artikel-artikel lain di LumaPost untuk mendapatkan insight lebih mendalam.</em></p>
+
+  </div>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- END ISI ARTIKEL                                         -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  NAVIGASI HALAMAN (Page Navigation)                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="flex flex-col sm:flex-row items-stretch gap-3 mt-16 pt-10 border-t border-ink-600">
+
+    <!-- Halaman Sebelumnya — isi href jika ada page sebelumnya, kosongkan jika tidak ada -->
+    <!-- <a href="index.html" class="nav-page-btn flex-1 text-left">
+      <span class="text-xs text-gray-500 mb-1 block">← Sebelumnya</span>
+      <span class="text-sm font-medium text-white">Judul halaman sebelumnya</span>
+    </a> -->
+
+    <!-- Kembali ke Beranda -->
+    <a href="../../index.html" class="flex-1 flex items-center justify-center gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all text-sm font-medium text-gray-300 hover:text-gold-400">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Kembali ke Beranda
+    </a>
+
+    <!-- Halaman Berikutnya — ganti href ke page-2.html jika artikel punya halaman 2 -->
+    <a href="page-2.html" class="flex-1 flex items-center justify-between gap-2 p-4 rounded-xl bg-ink-800 border border-ink-600 hover:border-gold-500/30 transition-all group">
+      <div>
+        <span class="text-xs text-gray-500 block mb-0.5">Halaman Berikutnya →</span>
+        <span class="text-sm font-medium text-white group-hover:text-gold-400 transition-colors">Halaman 2: Optimasi & SEO</span>
+      </div>
+      <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+  </div>
+
+</article>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  RELATED ARTICLES                                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
+  <div class="border-t border-ink-700 pt-12">
+    <h2 class="font-display text-xl font-bold text-white mb-6">Artikel Terkait</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+      <!-- ─────────────────────────────────── -->
+      <!-- RELATED CARD #1 — Edit di sini     -->
+      <!-- ─────────────────────────────────── -->
+      <a href="../tips-seo-2025/index.html" class="related-card group">
+        <img
+          src="../../images/thumb-seo.jpg"
+          alt="Tips SEO 2025"
+          class="related-thumb"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=200&q=70'"
+        />
+        <div>
+          <span class="text-xs text-gold-500 font-medium mb-1 block">SEO</span>
+          <p class="related-title">10 Tips SEO Terbaru 2025 yang Harus Anda Tahu Sekarang</p>
+          <span class="text-xs text-gray-600 mt-1 block">6 menit baca</span>
+        </div>
+      </a>
+
+      <!-- ─────────────────────────────────── -->
+      <!-- RELATED CARD #2 — Edit di sini     -->
+      <!-- ─────────────────────────────────── -->
+      <a href="../desain-ui-modern/index.html" class="related-card group">
+        <img
+          src="../../images/thumb-design.jpg"
+          alt="Desain UI Modern"
+          class="related-thumb"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1545235617-9465d2a55698?w=200&q=70'"
+        />
+        <div>
+          <span class="text-xs text-gold-500 font-medium mb-1 block">Desain</span>
+          <p class="related-title">Prinsip Desain UI Modern yang Wajib Dikuasai Designer 2025</p>
+          <span class="text-xs text-gray-600 mt-1 block">10 menit baca</span>
+        </div>
+      </a>
+
+      <!-- ─────────────────────────────────── -->
+      <!-- Tambah related card lain di sini   -->
+      <!-- ─────────────────────────────────── -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-ink-700 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="../../index.html" class="font-display text-lg font-bold">Luma<span class="text-gold-400">Post</span></a>
+    <p class="text-xs text-gray-600">© 2025 LumaPost. Portal Artikel Premium Indonesia.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SEO META TAGS — Edit to match your website            -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <title>LumaPost — Premium Articles & Modern Inspiration</title>
+  <meta name="description" content="LumaPost delivers premium articles on technology, design, productivity, and modern lifestyle. Read by thousands every day." />
+  <meta name="keywords" content="technology articles, modern design, productivity, lifestyle, SEO tips" />
+  <meta name="author" content="LumaPost" />
+  <link rel="canonical" href="https://lumapost.pages.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lumapost.pages.dev/" />
+  <meta property="og:title" content="LumaPost — Premium Articles & Modern Inspiration" />
+  <meta property="og:description" content="Premium articles on technology, design, productivity, and modern lifestyle." />
+  <meta property="og:image" content="https://lumapost.pages.dev/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LumaPost — Premium Articles & Modern Inspiration" />
+  <meta name="twitter:description" content="Premium articles on technology, design, and modern lifestyle." />
+  <meta name="twitter:image" content="https://lumapost.pages.dev/images/og-image.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#f0d080', 400: '#e8c24a', 500: '#c9a227', 600: '#a07d1a' },
+            ink:  { 900: '#0a0a0b', 800: '#111114', 700: '#18181c', 600: '#222228', 500: '#2e2e36' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ink-900 text-gray-100 font-body antialiased dark">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  NAVBAR                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16 lg:h-20">
+
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg shadow-gold-500/30">
+          <svg class="w-4 h-4 text-ink-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="font-display text-xl font-bold tracking-tight">Luma<span class="text-gold-400">Post</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Home</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Technology</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Design</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">Productivity</a>
+        <a href="#" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">About</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="searchToggle" class="p-2 text-gray-400 hover:text-gold-400 transition-colors" aria-label="Search">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button id="menuToggle" class="md:hidden p-2 text-gray-400 hover:text-gold-400 transition-colors" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div id="searchBar" class="hidden pb-4">
+      <div class="relative">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" placeholder="Search articles, topics, or categories..."
+          class="w-full bg-ink-700 border border-ink-500 rounded-xl pl-11 pr-4 py-3 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/40 transition-all" />
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-ink-600 pt-4">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="text-sm text-gray-300 hover:text-gold-400 transition-colors py-1">Home</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-gold-400 transition-colors py-1">Technology</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-gold-400 transition-colors py-1">Design</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-gold-400 transition-colors py-1">Productivity</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-gold-400 transition-colors py-1">About</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  HERO SECTION                                               -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold-400/4 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ink-700/30 rounded-full blur-3xl"></div>
+  </div>
+  <div class="absolute inset-0 opacity-5" style="background-image:linear-gradient(#c9a22720 1px,transparent 1px),linear-gradient(90deg,#c9a22720 1px,transparent 1px);background-size:48px 48px;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-4 py-1.5 mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+        <span class="text-xs font-medium text-gold-400 tracking-widest uppercase">Premium Article Portal</span>
+      </div>
+
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-8xl font-black leading-none tracking-tight mb-6">
+        <span class="text-white">Ideas That</span><br/>
+        <span class="hero-gradient-text">Inspire You</span>
+      </h1>
+
+      <p class="text-gray-400 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+        In-depth articles on technology, design, and productivity — written with precision for readers who want to keep growing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#articles" class="btn-gold px-8 py-3.5 rounded-xl font-medium text-sm tracking-wide inline-flex items-center gap-2">
+          Start Reading
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="px-8 py-3.5 rounded-xl font-medium text-sm tracking-wide border border-ink-500 text-gray-300 hover:border-gold-500/50 hover:text-gold-400 transition-all duration-300 inline-flex items-center gap-2">
+          Browse Categories
+        </a>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-ink-600 grid grid-cols-3 gap-6 max-w-sm mx-auto sm:max-w-md">
+        <div class="text-center">
+          <div class="font-display text-2xl font-bold text-white">50+</div>
+          <div class="text-xs text-gray-500 mt-0.5">Articles</div>
+        </div>
+        <div class="text-center border-x border-ink-600">
+          <div class="font-display text-2xl font-bold text-white">10K+</div>
+          <div class="text-xs text-gray-500 mt-0.5">Readers</div>
+        </div>
+        <div class="text-center">
+          <div class="font-display text-2xl font-bold text-white">5+</div>
+          <div class="text-xs text-gray-500 mt-0.5">Categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600">
+    <span class="text-xs tracking-widest uppercase">Scroll</span>
+    <div class="w-px h-8 bg-gradient-to-b from-gray-600 to-transparent animate-pulse"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FEATURED ARTICLE                                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-label mb-12">
+      <span class="text-xs text-gold-400 tracking-widest uppercase font-medium">✦ Featured Article</span>
+    </div>
+
+    <!-- ──────────────────────────────────────────── -->
+    <!-- FEATURED CARD — Edit: href, img, title, desc -->
+    <!-- ──────────────────────────────────────────── -->
+    <a href="artikel/cara-membuat-website-gratis/index.html" class="group block">
+      <div class="featured-card rounded-2xl overflow-hidden relative min-h-[480px] lg:min-h-[560px] flex items-end">
+        <img
+          src="images/featured-thumb.jpg"
+          alt="How to Build a Free Professional Website in 2025"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="eager"
+          onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"></div>
+        <div class="relative z-10 p-8 lg:p-12 w-full">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="badge-category">Technology</span>
+            <span class="badge-time">8 min read</span>
+          </div>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold text-white leading-tight mb-4 group-hover:text-gold-300 transition-colors max-w-3xl">
+            How to Build a Free Professional Website in 2025
+          </h2>
+          <p class="text-gray-300 text-base lg:text-lg leading-relaxed max-w-2xl mb-6">
+            A complete guide from zero to live — without spending a single cent. Perfect for beginners and professionals alike.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 border border-gold-500/30 flex items-center justify-center">
+              <span class="text-xs font-bold text-gold-400">LP</span>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-white">LumaPost Team</div>
+              <div class="text-xs text-gray-500">January 12, 2025</div>
+            </div>
+            <div class="ml-auto btn-gold-outline text-xs px-4 py-2 rounded-lg inline-flex items-center gap-1.5 group-hover:bg-gold-500 group-hover:text-ink-900 transition-all">
+              Read More
+              <svg class="w-3 h-3 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- END FEATURED CARD -->
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ARTICLES GRID                                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="articles" class="py-16 lg:py-24 border-t border-ink-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+      <div>
+        <span class="text-xs text-gold-400 tracking-widest uppercase font-medium">✦ Latest Articles</span>
+        <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mt-2">All Articles</h2>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="productivity">Productivity</button>
+        <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+      </div>
+    </div>
+
+    <!-- ╔═══════════════════════════════════════════════════════╗ -->
+    <!-- ║  ARTICLES GRID — ADD YOUR 50 ARTICLES HERE            ║ -->
+    <!-- ╠═══════════════════════════════════════════════════════╣ -->
+    <!-- ║  HOW TO ADD A NEW ARTICLE CARD:                        ║ -->
+    <!-- ║  1. Copy one full article-card block below             ║ -->
+    <!-- ║  2. Paste it after the last <!-- END ARTICLE CARD -->  ║ -->
+    <!-- ║  3. Change these 6 things only:                        ║ -->
+    <!-- ║     • data-category="technology"  → your category     ║ -->
+    <!-- ║     • href="artikel/YOUR-SLUG/index.html"              ║ -->
+    <!-- ║     • img src="images/YOUR-IMAGE.jpg"                  ║ -->
+    <!-- ║     • Date, read time, title, description              ║ -->
+    <!-- ╚═══════════════════════════════════════════════════════╝ -->
+    <div id="articleGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- ARTICLE CARD #1                          -->
+      <!-- ════════════════════════════════════════ -->
+      <article class="article-card group" data-category="technology">
+        <a href="artikel/cara-membuat-website-gratis/index.html" class="block">
+          <div class="thumbnail-wrapper">
+            <img src="images/thumb-website.jpg" alt="How to Build a Free Website" class="thumb-img" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=75'" />
+            <div class="thumb-overlay"><span class="thumb-read-btn">Read →</span></div>
+            <span class="thumb-category-badge">Technology</span>
+          </div>
+          <div class="card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-gray-500">Jan 12, 2025</span>
+              <span class="text-xs text-gray-500">8 min read</span>
+            </div>
+            <h3 class="card-title">How to Build a Free Professional Website in 2025</h3>
+            <p class="card-desc">A complete guide from zero to live — without spending a single cent. Perfect for beginners.</p>
+            <div class="card-footer">
+              <span class="card-read-more">Read Article</span>
+              <svg class="w-4 h-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE CARD #1 -->
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- ARTICLE CARD #2                          -->
+      <!-- ════════════════════════════════════════ -->
+      <article class="article-card group" data-category="technology">
+        <a href="artikel/tips-seo-2025/index.html" class="block">
+          <div class="thumbnail-wrapper">
+            <img src="images/thumb-seo.jpg" alt="10 Latest SEO Tips 2025" class="thumb-img" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&q=75'" />
+            <div class="thumb-overlay"><span class="thumb-read-btn">Read →</span></div>
+            <span class="thumb-category-badge">SEO</span>
+          </div>
+          <div class="card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-gray-500">Jan 20, 2025</span>
+              <span class="text-xs text-gray-500">6 min read</span>
+            </div>
+            <h3 class="card-title">10 Latest SEO Tips for 2025 You Need to Know Right Now</h3>
+            <p class="card-desc">Google's algorithm keeps changing. Learn the SEO strategies that actually work this year.</p>
+            <div class="card-footer">
+              <span class="card-read-more">Read Article</span>
+              <svg class="w-4 h-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE CARD #2 -->
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- ARTICLE CARD #3                          -->
+      <!-- ════════════════════════════════════════ -->
+      <article class="article-card group" data-category="design">
+        <a href="artikel/modern-ui-design/index.html" class="block">
+          <div class="thumbnail-wrapper">
+            <img src="images/thumb-design.jpg" alt="Modern UI Design Principles" class="thumb-img" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&q=75'" />
+            <div class="thumb-overlay"><span class="thumb-read-btn">Read →</span></div>
+            <span class="thumb-category-badge">Design</span>
+          </div>
+          <div class="card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-gray-500">Jan 28, 2025</span>
+              <span class="text-xs text-gray-500">10 min read</span>
+            </div>
+            <h3 class="card-title">Modern UI Design Principles Every Designer Must Master in 2025</h3>
+            <p class="card-desc">From glassmorphism to bento grids — master the design trends dominating the digital world.</p>
+            <div class="card-footer">
+              <span class="card-read-more">Read Article</span>
+              <svg class="w-4 h-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE CARD #3 -->
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- ARTICLE CARD #4                          -->
+      <!-- ════════════════════════════════════════ -->
+      <article class="article-card group" data-category="productivity">
+        <a href="artikel/productivity-system/index.html" class="block">
+          <div class="thumbnail-wrapper">
+            <img src="images/thumb-productivity.jpg" alt="Daily Productivity System" class="thumb-img" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=75'" />
+            <div class="thumb-overlay"><span class="thumb-read-btn">Read →</span></div>
+            <span class="thumb-category-badge">Productivity</span>
+          </div>
+          <div class="card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-gray-500">Feb 5, 2025</span>
+              <span class="text-xs text-gray-500">7 min read</span>
+            </div>
+            <h3 class="card-title">The Daily Productivity System That Changed How I Work</h3>
+            <p class="card-desc">Not about working harder, but smarter. This simple system doubled my output in 30 days.</p>
+            <div class="card-footer">
+              <span class="card-read-more">Read Article</span>
+              <svg class="w-4 h-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE CARD #4 -->
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- ARTICLE CARD #5                          -->
+      <!-- ════════════════════════════════════════ -->
+      <article class="article-card group" data-category="technology">
+        <a href="artikel/ai-tools-2025/index.html" class="block">
+          <div class="thumbnail-wrapper">
+            <img src="images/thumb-ai.jpg" alt="Best AI Tools 2025" class="thumb-img" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=75'" />
+            <div class="thumb-overlay"><span class="thumb-read-btn">Read →</span></div>
+            <span class="thumb-category-badge">Technology</span>
+          </div>
+          <div class="card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-gray-500">Feb 14, 2025</span>
+              <span class="text-xs text-gray-500">12 min read</span>
+            </div>
+            <h3 class="card-title">10 Best AI Tools of 2025 Every Content Creator Must Use</h3>
+            <p class="card-desc">The AI revolution isn't stopping. Here are the tools genuinely transforming how content is made.</p>
+            <div class="card-footer">
+              <span class="card-read-more">Read Article</span>
+              <svg class="w-4 h-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE CARD #5 -->
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- ARTICLE CARD #6                          -->
+      <!-- ════════════════════════════════════════ -->
+      <article class="article-card group" data-category="lifestyle">
+        <a href="artikel/morning-routine/index.html" class="block">
+          <div class="thumbnail-wrapper">
+            <img src="images/thumb-morning.jpg" alt="5-Minute Morning Routine" class="thumb-img" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=75'" />
+            <div class="thumb-overlay"><span class="thumb-read-btn">Read →</span></div>
+            <span class="thumb-category-badge">Lifestyle</span>
+          </div>
+          <div class="card-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-gray-500">Feb 20, 2025</span>
+              <span class="text-xs text-gray-500">5 min read</span>
+            </div>
+            <h3 class="card-title">The 5-Minute Morning Routine That Transformed My Day</h3>
+            <p class="card-desc">You don't need a 2-hour complicated morning. Just 5 minutes of the right habits changes everything.</p>
+            <div class="card-footer">
+              <span class="card-read-more">Read Article</span>
+              <svg class="w-4 h-4 text-gold-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE CARD #6 -->
+
+      <!--
+      ╔══════════════════════════════════════════════════════════╗
+      ║  ➕ PASTE YOUR 50 ARTICLE CARDS BELOW THIS COMMENT      ║
+      ║                                                           ║
+      ║  QUICK COPY TEMPLATE:                                     ║
+      ║  ─────────────────────────────────────────────────────── ║
+      ║  <article class="article-card group"                     ║
+      ║    data-category="technology">                           ║
+      ║    <a href="artikel/YOUR-SLUG/index.html" class="block"> ║
+      ║      <div class="thumbnail-wrapper">                     ║
+      ║        <img                                              ║
+      ║          src="images/YOUR-THUMB.jpg"                     ║
+      ║          alt="Article Title"                             ║
+      ║          class="thumb-img" loading="lazy"                ║
+      ║          onerror="this.src='https://images.unsplash..." ║
+      ║        />                                                ║
+      ║        <div class="thumb-overlay">                       ║
+      ║          <span class="thumb-read-btn">Read →</span>      ║
+      ║        </div>                                            ║
+      ║        <span class="thumb-category-badge">              ║
+      ║          Technology                                      ║
+      ║        </span>                                           ║
+      ║      </div>                                              ║
+      ║      <div class="card-content">                         ║
+      ║        <div class="flex items-center               ║
+      ║          justify-between mb-3">                         ║
+      ║          <span class="text-xs text-gray-500">           ║
+      ║            Mar 1, 2025</span>                            ║
+      ║          <span class="text-xs text-gray-500">           ║
+      ║            5 min read</span>                             ║
+      ║        </div>                                            ║
+      ║        <h3 class="card-title">Your Title</h3>           ║
+      ║        <p class="card-desc">Short description.</p>      ║
+      ║        <div class="card-footer">                        ║
+      ║          <span class="card-read-more">                  ║
+      ║            Read Article</span>                          ║
+      ║          <svg class="w-4 h-4 text-gold-500             ║
+      ║            opacity-0 group-hover:opacity-100            ║
+      ║            transition-all group-hover:translate-x-1"   ║
+      ║            fill="none" stroke="currentColor"            ║
+      ║            stroke-width="2" viewBox="0 0 24 24">        ║
+      ║            <path d="M5 12h14M12 5l7 7-7 7"/>           ║
+      ║          </svg>                                         ║
+      ║        </div>                                           ║
+      ║      </div>                                             ║
+      ║    </a>                                                 ║
+      ║  </article>                                             ║
+      ╚══════════════════════════════════════════════════════════╝
+      -->
+
+    </div>
+    <!-- END ARTICLES GRID -->
+
+    <!-- Pagination -->
+    <div class="flex items-center justify-center gap-2 mt-16">
+      <button class="pagination-btn opacity-40 cursor-not-allowed" disabled>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="pagination-btn active">1</button>
+      <button class="pagination-btn">2</button>
+      <button class="pagination-btn">3</button>
+      <span class="text-gray-600 px-2">...</span>
+      <button class="pagination-btn">8</button>
+      <button class="pagination-btn">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  NEWSLETTER SECTION                                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="newsletter-card rounded-2xl p-10 lg:p-16 text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle at 30% 50%,#c9a22750,transparent 60%),radial-gradient(circle at 70% 50%,#c9a22730,transparent 60%);"></div>
+      <div class="relative z-10 max-w-xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-4 py-1.5 mb-6">
+          <span class="text-xs font-medium text-gold-400 tracking-widest uppercase">Newsletter</span>
+        </div>
+        <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Don't Miss Our Latest Articles</h2>
+        <p class="text-gray-400 mb-8">Get premium articles delivered straight to your inbox. Free, no spam.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input type="email" placeholder="your@email.com"
+            class="flex-1 bg-ink-700 border border-ink-500 rounded-xl px-5 py-3.5 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-gold-500 transition-colors" />
+          <button class="btn-gold px-6 py-3.5 rounded-xl font-medium text-sm whitespace-nowrap">Subscribe Free</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<footer class="border-t border-ink-700 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+            <svg class="w-4 h-4 text-ink-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="font-display text-xl font-bold">Luma<span class="text-gold-400">Post</span></span>
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed">A premium article portal for readers who want to keep growing and stay inspired.</p>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Categories</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Technology</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Design</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Productivity</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Lifestyle</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">SEO & Marketing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Pages</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Home</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">About Us</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Contact</a></li>
+          <li><a href="sitemap.xml" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Sitemap</a></li>
+          <li><a href="#" class="text-sm text-gray-500 hover:text-gold-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Follow Us</h4>
+        <div class="flex gap-3">
+          <a href="#" class="social-btn" aria-label="Twitter/X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-ink-700 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-600">© 2025 LumaPost. Made with ❤️ for curious minds.</p>
+      <p class="text-xs text-gray-600">Static Site · Hosted on Cloudflare Pages</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-gold-500 text-ink-900 shadow-lg shadow-gold-500/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-gold-400 hover:scale-110 z-40" aria-label="Back to top">
+  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

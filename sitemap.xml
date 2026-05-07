@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ═══════════════════════════════════════════════════════════
+  SITEMAP.XML — LumaPost
+  ───────────────────────────────────────────────────────────
+  HOW TO ADD A NEW PAGE:
+  Copy one <url> block, paste after the last one,
+  then update <loc>, <lastmod>, and <priority>.
+
+  Priority guide:
+    Homepage  → 1.0
+    Articles  → 0.8
+    Page 2+   → 0.6
+    Category  → 0.7
+  ═══════════════════════════════════════════════════════════
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://lumapost.pages.dev/</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Article: How to Build a Free Website -->
+  <url>
+    <loc>https://lumapost.pages.dev/artikel/cara-membuat-website-gratis/</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lumapost.pages.dev/artikel/cara-membuat-website-gratis/page-2.html</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Article: SEO Tips 2025 -->
+  <url>
+    <loc>https://lumapost.pages.dev/artikel/tips-seo-2025/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!--
+  ═══════════════════════════════════════════════
+  ADD YOUR 50 ARTICLES BELOW — COPY THIS BLOCK:
+
+  <url>
+    <loc>https://lumapost.pages.dev/artikel/YOUR-ARTICLE-SLUG/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  ═══════════════════════════════════════════════
+  -->
+
+</urlset>

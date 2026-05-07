@@ -1,0 +1,14 @@
+# ═══════════════════════════════════════════
+# robots.txt — LumaPost
+# Hosted on: https://lumapost.pages.dev
+# ═══════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# Block crawlers from internal/temp paths (add more if needed)
+Disallow: /drafts/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://lumapost.pages.dev/sitemap.xml
